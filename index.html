@@ -357,379 +357,7 @@
       </div>
       <a href="#" class="read-more" onclick="return false;">READ FULL ANALYSIS →</a>
     </article>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>NOVA BLOG · The Quiet Crisis: VTOL Noise & Community Resistance</title>
-    <meta name="description" content="The silent threat to urban air mobility: noise pollution, psychoacoustics, and NIMBY lawsuits. Synthetic noise maps, decibel analysis, and community resistance data.">
-    <style>
-        /* ----- FUTURISTIC DARK TONE (consistent with main blog) ----- */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
 
-        body {
-            background: #0a0c10;
-            background-image: radial-gradient(circle at 25% 40%, rgba(30, 150, 220, 0.03) 0%, #0a0c10 90%);
-            font-family: 'Inter', 'SF Mono', 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', monospace;
-            color: #eef2ff;
-            line-height: 1.5;
-            padding: 2rem 1.5rem;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* futuristic glow + glassmorphism */
-        h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            background: linear-gradient(125deg, #FFFFFF 20%, #5bc0ff 65%, #b794f4 100%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            color: transparent;
-            text-shadow: 0 2px 5px rgba(0,255,255,0.1);
-            margin-bottom: 0.5rem;
-        }
-
-        .subhead {
-            font-size: 1.2rem;
-            color: #9aaec0;
-            border-left: 3px solid #2dd4bf;
-            padding-left: 1.2rem;
-            margin: 1rem 0 2rem 0;
-            font-weight: 400;
-            backdrop-filter: blur(2px);
-        }
-
-        .manifesto {
-            background: rgba(18, 25, 40, 0.65);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(45, 212, 191, 0.25);
-            border-radius: 32px;
-            padding: 1.8rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-        }
-
-        .manifesto p {
-            font-size: 1rem;
-            color: #cbd5e6;
-            margin-bottom: 0.7rem;
-        }
-
-        .manifesto .highlight {
-            font-weight: 600;
-            color: #2dd4bf;
-            text-shadow: 0 0 4px #2dd4bf80;
-        }
-
-        /* full blog post styling */
-        .blog-post-full {
-            background: rgba(12, 18, 28, 0.75);
-            backdrop-filter: blur(12px);
-            border-radius: 36px;
-            border: 1px solid rgba(45, 212, 191, 0.3);
-            padding: 2.2rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 10px 25px -12px rgba(0,0,0,0.6);
-        }
-
-        .post-header {
-            margin-bottom: 1.8rem;
-            border-bottom: 1px solid #2dd4bf40;
-            padding-bottom: 1rem;
-        }
-
-        .post-category {
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            background: #1e2a3a;
-            color: #7ad0ff;
-            padding: 0.25rem 1rem;
-            border-radius: 40px;
-            display: inline-block;
-            border: 0.5px solid #2dd4bf60;
-        }
-
-        .post-title-large {
-            font-size: 2.4rem;
-            font-weight: 700;
-            margin: 1rem 0 0.5rem;
-            letter-spacing: -0.02em;
-            color: #f0f3fc;
-        }
-
-        .post-meta-info {
-            display: flex;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            color: #94a3b8;
-            font-size: 0.85rem;
-            margin-top: 0.75rem;
-        }
-
-        .post-body {
-            color: #cfdeff;
-            line-height: 1.7;
-        }
-
-        .post-body h2 {
-            font-size: 1.7rem;
-            margin: 1.8rem 0 1rem 0;
-            color: #2dd4bf;
-            font-weight: 600;
-            letter-spacing: -0.01em;
-        }
-
-        .post-body h3 {
-            font-size: 1.3rem;
-            margin: 1.5rem 0 0.8rem 0;
-            color: #b9e0ff;
-        }
-
-        .post-body p {
-            margin-bottom: 1.2rem;
-        }
-
-        .data-table {
-            background: #0f172ad9;
-            border-radius: 24px;
-            padding: 1rem;
-            margin: 1.5rem 0;
-            border: 1px solid #2dd4bf60;
-            overflow-x: auto;
-        }
-
-        .data-table table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.85rem;
-        }
-
-        .data-table th, .data-table td {
-            padding: 0.7rem;
-            text-align: left;
-            border-bottom: 1px solid #2dd4bf30;
-        }
-
-        .data-table th {
-            color: #2dd4bf;
-            font-weight: 600;
-        }
-
-        .noise-badge {
-            background: #00000066;
-            border-radius: 20px;
-            padding: 0.2rem 0.7rem;
-            font-family: monospace;
-            font-size: 0.8rem;
-            color: #ffb347;
-        }
-
-        .insight-box {
-            background: #1c263f60;
-            border-left: 4px solid #2dd4bf;
-            padding: 1rem 1.5rem;
-            border-radius: 20px;
-            margin: 1.5rem 0;
-        }
-
-        hr {
-            margin: 2rem 0;
-            border: none;
-            height: 1px;
-            background: linear-gradient(90deg, #2dd4bf30, #2dd4bf, #2dd4bf30);
-        }
-
-        footer {
-            margin-top: 2rem;
-            padding-top: 1.5rem;
-            font-size: 0.85rem;
-            color: #7e8aa2;
-            text-align: center;
-            border-top: 1px solid #2dd4bf20;
-        }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: #2dd4bf;
-            text-decoration: none;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-
-        @media (max-width: 700px) {
-            body { padding: 1rem; }
-            .post-title-large { font-size: 1.8rem; }
-            .blog-post-full { padding: 1.5rem; }
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <!-- navigation back to main blog (optional) -->
-    <a href="#" class="back-link" id="homeLink">← Back to all posts</a>
-
-    <!-- full article: The Quiet Crisis -->
-    <article class="blog-post-full">
-        <div class="post-header">
-            <span class="post-category">⚡ VTOL MARKET ANALYSIS</span>
-            <h1 class="post-title-large">The Quiet Crisis: VTOL Noise Pollution and Community Resistance</h1>
-            <div class="post-meta-info">
-                <span>📅 April 2026 · Market Intel</span>
-                <span>⏱️ 8 min read</span>
-                <span>🔊 synthetic decibel + psychoacoustic data</span>
-            </div>
-        </div>
-        <div class="post-body">
-            <p>Helicopter noise killed urban heliports. Will eVTOL rotors face the same fate? While the industry celebrates silent electric lift, the reality of <strong>perceived noise</strong> — not just decibels — is already sparking lawsuits, community blockades, and political pushback. This is the quiet crisis that most VTOL forecasts ignore.</p>
-
-            <p>Using synthetic noise telemetry, psychoacoustic modeling, and real-world NIMBY case studies, we analyze the three hard truths: <strong>rotor broadband noise, tonal signatures, and community tolerance curves.</strong> If urban air mobility (UAM) ignores this, the first vertiports will be grounded before they open.</p>
-
-            <h2>🔊 Decibels Don't Tell the Whole Story</h2>
-            <p>Helicopters operate around 85–95 dB at 250 ft. Early eVTOL prototypes claim 65–75 dB — quieter, but not silent. However, <span class="noise-badge">psychoacoustics</span> reveals that high-frequency whine from prop-rotors and thrust fans can be <strong>more annoying per decibel</strong> than helicopter chop. Our synthetic listening panel (simulated using ISO 1996-2 standards) rated eVTOL overflight as 40% more intrusive at equivalent loudness.</p>
-
-            <div class="data-table">
-                 <h3 style="margin-top:0; margin-bottom:0.8rem;">📊 Synthetic Annoyance Index (higher = worse)</h3>
-                 <table>
-                     <thead>
-                         <tr><th>Aircraft type</th><th>Peak dB (flyover)</th><th>Annoyance score (0–100)</th><th>Community rejection risk</th></tr>
-                     </thead>
-                     <tbody>
-                         <tr><td>Conventional helicopter (Bell 206)</td><td>92 dB</td><td>82</td><td>Very High</td></tr>
-                         <tr><td>eVTOL open rotor (early prototype)</td><td>78 dB</td><td>71</td><td>High</td></tr>
-                         <tr><td>eVTOL ducted fan (Lilium-style)</td><td>71 dB</td><td>58</td><td>Moderate</td></tr>
-                         <tr><td>eVTOL shrouded + blade shaping</td><td>66 dB</td><td>41</td><td>Low/Moderate</td></tr>
-                     </tbody>
-                 </table>
-                 <p style="font-size:0.7rem; margin-top:0.5rem;">Synthetic data derived from community response modeling & ISO-1996-2:2024 extrapolation. Baseline helicopter annoyance anchored to real-world noise complaints.</p>
-            </div>
-
-            <h2>🏙️ The NIMBY Firewall: Case Studies from Three Metros</h2>
-            <p>Using synthetic community opposition models, we simulated public response to proposed vertiport sites in Manhattan, Santa Monica, and London's Islington district. The trigger is not just <em>loudness</em> but <em>frequency and time-of-day</em>. Our model shows that 12 daily eVTOL operations above 70 dB will generate a tipping point: >35% of residents sign opposition petitions within 6 months.</p>
-
-            <div class="insight-box">
-                <strong>⚠️ Synthetic verdict from community resistance algorithm:</strong> Without mandatory curfews and noise abatement paths, 7 out of 10 proposed urban vertiports face legal blockage before 2028.
-            </div>
-
-            <h2>🧠 Psychoacoustics: Why High Pitch = High Anger</h2>
-            <p>The human ear is evolutionarily sensitive to high-frequency tones (2–5 kHz) — the exact range where small electric rotors produce tonal noise. Even at 65 dB, a 3.2 kHz pure tone triggers a "sharpness" metric that increases annoyance by 300% compared to broadband noise. Our synthetic audio signatures, generated from published eVTOL motor data, reveal that many current designs will produce a <strong>"mosquito swarm" profile</strong> during hover — politically lethal.</p>
-
-            <div class="data-table">
-                <h3 style="margin-top:0;">🔬 Synthetic Tonal Sharpness (unit: acum)</h3>
-                <table>
-                    <thead><tr><th>eVTOL design class</th><th>Sharpness at 150m (acum)</th><th>Perceptual equivalent</th></tr></thead>
-                    <tbody>
-                        <tr><td>Open 6-rotor (Joby-like)</td><td>2.7 acum</td><td>Vacuum cleaner at 15m</td></tr>
-                        <tr><td>Ducted fan (Wisk / Archer)</td><td>1.9 acum</td><td>Laptop cooling fan (annoying)</td></tr>
-                        <tr><td>Shrouded + variable pitch</td><td>1.1 acum</td><td>Quiet EV pass-by</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <h2>📉 Economic Impact: Noise = Lost $$</h2>
-            <p>Every blocked vertiport translates to millions in rerouting costs. Our synthetic ROI model for a 20‑vehicle fleet shows that noise complaints cause average 23% lower ridership in dense residential zones, plus $2.3M annual legal defense. The winning strategy: invest early in blade reshaping, variable rotor speeds, and flight path optimization.</p>
-
-            <div class="insight-box">
-                <strong>💡 Key takeaway for VTOL investors & OEMs:</strong> Quoted decibel numbers are meaningless without community psychoacoustic trials. Build quieter <em>where it matters</em> — at hover and climb-out — or risk becoming the next helicopter ban headline.
-            </div>
-
-            <h2>📡 Synthetic Data Appendix: Community Resistance Index (CRI)</h2>
-            <p>Based on our proprietary synthetic model (NOVA Noise Resistance v1.0), we generated a city-by-city forecast of eVTOL acceptance before 2028. Higher CRI = greater probability of operation bans.</p>
-            <div class="data-table">
-                <table>
-                    <thead><tr><th>City</th><th>CRI (0–100)</th><th>Primary Concern</th></tr></thead>
-                    <tbody>
-                        <tr><td>San Francisco, CA</td><td>74</td><td>Dense hills + acoustic reflections</td></tr>
-                        <tr><td>New York, NY (Manhattan)</td><td>68</td><td>Low-altitude corridors over parks</td></tr>
-                        <tr><td>London, UK (Islington)</td><td>81</td><td>Historic preservation & noise regs</td></tr>
-                        <tr><td>Singapore</td><td>42</td><td>Government-led integration</td></tr>
-                        <tr><td>Los Angeles, CA</td><td>59</td><td>Sprawl but noise-sensitive westside</td></tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <p>The industry's "quiet revolution" marketing glosses over real acoustic fatigue. At NOVA Blog, we track synthetic telemetry to forecast where the next community blockade will erupt. The quiet crisis is already here — it just hasn't landed yet.</p>
-
-            <hr>
-
-            <p style="font-size:0.85rem; color:#9aaec0;">📡 All non-public data presented as synthetic indicators for market analysis purposes. Based on publicly disclosed eVTOL specs and community noise standards (ISO 1996, ECAC Doc 29). First‑party analysis by VTOL Market Intel.</p>
-        </div>
-    </article>
-
-    <!-- synthetic related / post metadata (modal ready) -->
-    <footer>
-        <p>© NOVA BLOG — state of the VTOL market · synthetic data intelligence<br>First‑party analysis · noise, community resistance, and urban air mobility futures</p>
-        <p style="margin-top: 0.5rem;">🔗 <a href="#" id="canonicalLink" style="color:#2dd4bf;">Canonical URL</a> · 📡 <a href="#" style="color:#2dd4bf;">RSS feed</a> · 🗺️ <a href="#" style="color:#2dd4bf;">sitemap</a></p>
-    </footer>
-</div>
-
-<script>
-    // This script ensures that any "Read full article" from a hypothetical main blog index would open 
-    // and that this standalone page functions as a direct deep-link, preserving blog navigation.
-    // For full integration with the existing blog system: the main blog uses modal reading. 
-    // But here we present the full standalone post (entire article) ready for copy-paste into any HTML.
-    // If you copy this whole block into your existing index.html as a separate route or replace content, 
-    // the "Read full article" buttons from the main blog will correctly display this content if linked.
-    // However to make it functional as a standalone page on GitHub Pages, we also add manual navigation.
-
-    // Handle "Back to all posts" link: redirect to main blog index (if hosted in same directory)
-    const homeLink = document.getElementById('homeLink');
-    if (homeLink) {
-        homeLink.addEventListener('click', (e) => {
-            e.preventDefault();
-            // If you are on a page like 'quiet-crisis.html' you want to go to index.html. 
-            // For simplicity, we navigate to 'index.html' (the main blog). Works after deployment.
-            window.location.href = 'index.html';
-        });
-    }
-
-    // Set canonical dynamic example
-    const canonLink = document.getElementById('canonicalLink');
-    if (canonLink) {
-        canonLink.href = window.location.href;
-        canonLink.addEventListener('click', (e) => { e.preventDefault(); alert('Canonical URL: ' + window.location.href + ' — first-party blog post about VTOL noise crisis.'); });
-    }
-
-    // Provide a global function that external readers (or original blog modal) could call to display same article synced 
-    // but since this entire page is the article itself, "read full article" on main blog would ideally open this page in new tab.
-    console.log('✅ VTOL market deep dive — Quiet Crisis post is ready. Copy-paste this entire HTML into your GitHub Pages blog as a standalone page (e.g., quiet-crisis.html) or integrate into index.');
-</script>
-
-<!-- Instructions for integration with main blog's "Read full article" buttons:
-     In your main blog (index.html) each post card has a "Read full post →" link. 
-     To make "The Quiet Crisis" post work properly, replace the current placeholder for post id or title matching "Quiet Crisis"
-     with a direct link to this HTML file (e.g., `quiet-crisis.html`). Since this file is designed to be dropped 
-     into the same repository, the "read full article" will navigate to this dedicated page.
-     
-     Alternatively, if you prefer to keep everything inside a single index.html and use the modal reading system,
-     copy the .blog-post-full inner HTML (the article content) into the modal trigger for post ID 3.
-     For convenience, this standalone version includes full styling and all synthetic data tables. 
-     To integrate: 
-     1. Save this file as 'quiet-crisis.html' beside your index.html.
-     2. In your main blog's blogPosts array, find the object with title containing "quiet crisis" and update its contentPlaceholder to a summary 
-        and change the read-link to point to 'quiet-crisis.html' or open the modal with extended content.
-     
-     We also keep consistent dark theme so any copy-paste works instantly.
--->
-</body>
-</html>
     <!-- POST 4: Cost per seat & commercial viability -->
     <article class="post-card">
       <div class="post-category">💰 ECONOMICS · UTILITY</div>
@@ -757,6 +385,74 @@
       </div>
       <a href="#" class="read-more" onclick="return false;">READ FULL ANALYSIS →</a>
     </article>
+    {
+    id: 6,
+    title: "The Quiet Crisis: VTOL Noise Pollution and Community Resistance",
+    category: "VTOL MARKET",
+    readTime: "8 min read",
+    excerpt: "Helicopter noise killed urban heliports. Will eVTOL rotors face the same fate? Synthetic noise maps, psychoacoustic analysis, and NIMBY lawsuits — a hard look at the silent threat to urban air mobility.",
+    slug: "quiet-crisis-vtol-noise",
+    contentPlaceholder: `<div style="font-family: inherit;">
+        <p><strong>🔊 The industry boasts about decibel reductions, but decibels don't tell the whole story.</strong> While early eVTOL prototypes claim 65–75 dB (quieter than helicopters at 85–95 dB), psychoacoustics reveals that high-frequency whine from electric rotors can be <strong>more annoying per decibel</strong> than traditional rotor chop. Our synthetic listening panel rated eVTOL overflight as 40% more intrusive at equivalent loudness.</p>
+
+        <div style="background:#0f172ad9; border-radius:24px; padding:1rem; margin:1.5rem 0; border:1px solid #2dd4bf60; overflow-x:auto;">
+            <h3 style="color:#2dd4bf; margin-bottom:0.8rem;">📊 Synthetic Annoyance Index (higher = worse)</h3>
+            <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
+                <thead><tr style="border-bottom:1px solid #2dd4bf30;"><th style="padding:0.5rem; text-align:left;">Aircraft type</th><th style="padding:0.5rem; text-align:left;">Peak dB</th><th style="padding:0.5rem; text-align:left;">Annoyance (0–100)</th><th style="padding:0.5rem; text-align:left;">Risk</th></tr></thead>
+                <tbody>
+                    <tr><td style="padding:0.5rem;">Conventional helicopter</td><td>92 dB</td><td>82</td><td>Very High</td></tr>
+                    <tr><td style="padding:0.5rem;">eVTOL open rotor</td><td>78 dB</td><td>71</td><td>High</td></tr>
+                    <tr><td style="padding:0.5rem;">eVTOL ducted fan</td><td>71 dB</td><td>58</td><td>Moderate</td></tr>
+                    <tr><td style="padding:0.5rem;">Shrouded + blade shaping</td><td>66 dB</td><td>41</td><td>Low/Moderate</td></tr>
+                </tbody>
+            </table>
+            <p style="font-size:0.7rem; margin-top:0.5rem;">Synthetic data: community response modeling + ISO 1996-2:2024 extrapolation.</p>
+        </div>
+
+        <p><strong>🏙️ The NIMBY Firewall</strong> — Using synthetic community opposition models, we simulated responses to vertiports in Manhattan, Santa Monica, and London. The trigger is not just loudness but frequency and time-of-day. Our model shows that 12 daily eVTOL operations above 70 dB generate a tipping point: >35% of residents sign opposition petitions within 6 months.</p>
+
+        <div style="background:#1c263f60; border-left:4px solid #2dd4bf; padding:1rem 1.5rem; border-radius:20px; margin:1.5rem 0;">
+            <strong>⚠️ Synthetic verdict:</strong> Without mandatory curfews and noise abatement paths, 7 out of 10 proposed urban vertiports face legal blockage before 2028.
+        </div>
+
+        <p><strong>🧠 Psychoacoustics: Why High Pitch = High Anger</strong> — The human ear is evolutionarily sensitive to high-frequency tones (2–5 kHz), the exact range where small electric rotors produce tonal noise. Even at 65 dB, a 3.2 kHz pure tone triggers a "sharpness" metric that increases annoyance by 300% compared to broadband noise. Many current designs produce a <strong>"mosquito swarm" profile</strong> during hover — politically lethal.</p>
+
+        <div style="background:#0f172ad9; border-radius:24px; padding:1rem; margin:1.5rem 0; overflow-x:auto;">
+            <h3 style="color:#2dd4bf;">🔬 Synthetic Tonal Sharpness (acum)</h3>
+            <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
+                <thead><tr><th style="padding:0.5rem;">Design</th><th style="padding:0.5rem;">Sharpness</th><th style="padding:0.5rem;">Perceptual equivalent</th></tr></thead>
+                <tbody>
+                    <tr><td>Open 6-rotor</td><td>2.7 acum</td><td>Vacuum cleaner at 15m</td></tr>
+                    <tr><td>Ducted fan</td><td>1.9 acum</td><td>Laptop cooling fan (annoying)</td></tr>
+                    <tr><td>Shrouded + variable pitch</td><td>1.1 acum</td><td>Quiet EV pass-by</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p><strong>📉 Economic Impact:</strong> Every blocked vertiport costs millions. Our synthetic ROI model shows noise complaints cause 23% lower ridership in dense zones, plus $2.3M annual legal defense per contested site.</p>
+
+        <div style="background:#1c263f60; border-left:4px solid #2dd4bf; padding:1rem 1.5rem; border-radius:20px; margin:1.5rem 0;">
+            <strong>💡 Key takeaway:</strong> Quoted decibel numbers are meaningless without community psychoacoustic trials. Build quieter at hover and climb-out — or risk becoming the next helicopter ban headline.
+        </div>
+
+        <p><strong>📡 Community Resistance Index (CRI) — synthetic forecast by city:</strong></p>
+        <div style="background:#0f172ad9; border-radius:24px; padding:1rem; margin:1rem 0;">
+            <table style="width:100%; border-collapse:collapse; font-size:0.85rem;">
+                <thead><tr><th>City</th><th>CRI (0–100)</th><th>Primary Concern</th></tr></thead>
+                <tbody>
+                    <tr><td>San Francisco</td><td>74</td><td>Dense hills + reflections</td></tr>
+                    <tr><td>Manhattan</td><td>68</td><td>Low corridors over parks</td></tr>
+                    <tr><td>London (Islington)</td><td>81</td><td>Historic preservation</td></tr>
+                    <tr><td>Singapore</td><td>42</td><td>Gov integration</td></tr>
+                    <tr><td>Los Angeles</td><td>59</td><td>Noise-sensitive westside</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <hr style="margin:1.5rem 0; border-color:#2dd4bf30;">
+        <p style="font-size:0.8rem; color:#9aaec0;">📡 All non-public data presented as synthetic indicators for market analysis. Based on public eVTOL specs and ISO 1996, ECAC Doc 29 standards. First-party analysis — NOVA Blog VTOL Market Intel.</p>
+    </div>`
+},
   </div>
 
   <!-- extra synthetic post: full length featured -->
