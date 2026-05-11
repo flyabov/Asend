@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VTOL Market · The Quiet Crisis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0c10;
+            font-family: 'Inter', system-ui, -apple-system, monospace;
+            color: #eef2ff;
+            line-height: 1.5;
+            padding: 2rem 1.5rem;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* post card styling */
+        .post-card {
+            background: rgba(12, 18, 28, 0.9);
+            backdrop-filter: blur(12px);
+            border-radius: 28px;
+            padding: 1.8rem;
+            border: 1px solid rgba(45, 212, 191, 0.3);
+            transition: all 0.2s ease;
+            margin-bottom: 2rem;
+        }
+
+        .post-card:hover {
+            border-color: #2dd4bf;
+            transform: translateY(-2px);
+        }
+
+        .post-category {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            background: #1e2a3a;
+            color: #7ad0ff;
+            padding: 0.25rem 1rem;
+            border-radius: 40px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        .post-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.75rem;
+            color: #f0f3fc;
+        }
+
+        .post-meta {
+            font-size: 0.75rem;
+            color: #94a3b8;
+            margin-bottom: 1rem;
+            font-family: monospace;
+        }
+
+        .post-excerpt {
+            color: #cbd5e6;
+            margin-bottom: 1.25rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            color: #2dd4bf;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* modal styling */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            backdrop-filter: blur(16px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            visibility: hidden;
+            opacity: 0;
+            transition: visibility 0.2s, opacity 0.2s;
+        }
+
+        .modal-content {
+            background: #0c1120dd;
+            border: 1px solid #2dd4bfaa;
+            border-radius: 32px;
+            max-width: 700px;
+            width: 90%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .modal-content h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            padding-right: 2rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            right: 1.5rem;
+            top: 1rem;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #2dd4bf;
+        }
+
+        .modal-body {
+            color: #cfdeff;
+            line-height: 1.6;
+        }
+
+        .modal-body table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .modal-body th, .modal-body td {
+            padding: 0.5rem;
+            text-align: left;
+            border-bottom: 1px solid #2dd4bf30;
+        }
+
+        .modal-body th {
+            color: #2dd4bf;
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border-color: #2dd4bf30;
+        }
+    </style>
+</head>
+<body>
+<!-- MODAL (hidden by default) -->
+<div id="quietCrisisModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <h2 id="modalTitle">The Quiet Crisis: VTOL Noise Pollution</h2>
+        <div id="modalBody" class="modal-body">
+            <!-- content loaded by JavaScript -->
+        </div>
+    </div>
+</div>
+
+<!-- SCRIPT TAG (here it is!) -->
+<script>
+    function openModal() {
+        const modal = document.getElementById('quietCrisisModal');
+        const modalBody = document.getElementById('modalBody');
+        
+        modalBody.innerHTML = `
+            <p><strong>🔊 Decibels don't tell the whole story.</strong> Helicopters operate at 85–95 dB at 250 ft. Early eVTOL prototypes claim 65–75 dB — quieter, but not silent. However, psychoacoustics reveals that high-frequency whine from small electric rotors can be <strong>more annoying per decibel</strong> than traditional rotor chop. Our synthetic listening panel rated eVTOL overflight as 40% more intrusive at equivalent loudness.</p>
+
+            <div style="background:#0f172ad9; border-radius:24px; padding:1rem; margin:1.5rem 0; border:1px solid #2dd4bf60;">
+                <h3 style="color:#2dd4bf; margin-bottom:0.8rem;">📊 Synthetic Annoyance Index</h3>
+                <table>
+                    <thead><tr><th>Aircraft</th><th>Peak dB</th><th>Annoyance (0-100)</th><th>Risk</th></tr></thead>
+                    <tbody>
+                        <tr><td>Helicopter</td><td>92 dB</td><td>82</td><td>Very High</td></tr>
+                        <tr><td>eVTOL open rotor</td><td>78 dB</td><td>71</td><td>High</td></tr>
+                        <tr><td>eVTOL ducted fan</td><td>71 dB</td><td>58</td><td>Moderate</td></tr>
+                        <tr><td>Shrouded + blade shaping</td><td>66 dB</td><td>41</td><td>Low</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <p><strong>🏙️ The NIMBY Firewall</strong> — Using synthetic community opposition models, we simulated vertiport responses in Manhattan, Santa Monica, and London. Twelve daily eVTOL operations above 70 dB trigger a tipping point: over 35% of residents sign opposition petitions within 6 months.</p>
+
+            <div style="background:#1c263f60; border-left:4px solid #2dd4bf; padding:1rem 1.5rem; margin:1.5rem 0;">
+                <strong>⚠️ Verdict:</strong> Without curfews and noise abatement, 7 out of 10 urban vertiports face legal blockage before 2028.
+            </div>
+
+            <p><strong>🧠 Psychoacoustics: Why High Pitch = High Anger</strong> — The human ear is sensitive to 2-5 kHz tones — exactly where eVTOL rotors produce noise. A 3.2 kHz tone at 65 dB triggers a "sharpness" metric 300% higher than broadband noise, creating a politically lethal "mosquito swarm" profile during hover.</p>
+
+            <div style="background:#0f172ad9; border-radius:24px; padding:1rem; margin:1.5rem 0;">
+                <h3 style="color:#2dd4bf;">🔬 Synthetic Tonal Sharpness (acum)</h3>
+                <table>
+                    <tr><td>Open 6-rotor</td><td>2.7 acum</td><td>Vacuum cleaner at 15m</td></tr>
+                    <tr><td>Ducted fan</td><td>1.9 acum</td><td>Laptop fan (annoying)</td></tr>
+                    <tr><td>Shrouded + variable pitch</td><td>1.1 acum</td><td>Quiet EV pass-by</td></tr>
+                </table>
+            </div>
+
+            <p><strong>📡 Community Resistance Index (CRI) — synthetic forecast:</strong></p>
+            <div style="background:#0f172ad9; border-radius:24px; padding:1rem;">
+                <table>
+                    <tr><th>City</th><th>CRI (0-100)</th><th>Primary Concern</th></tr>
+                    <tr><td>San Francisco</td><td>74</td><td>Dense hills + reflections</td></tr>
+                    <tr><td>Manhattan</td><td>68</td><td>Low corridors over parks</td></tr>
+                    <tr><td>London (Islington)</td><td>81</td><td>Historic preservation</td></tr>
+                    <tr><td>Singapore</td><td>42</td><td>Government integration</td></tr>
+                    <tr><td>Los Angeles</td><td>59</td><td>Noise-sensitive westside</td></tr>
+                </table>
+            </div>
+
+            <hr>
+            <p style="font-size:0.8rem;">📡 All non-public data presented as synthetic indicators for market analysis. Based on public eVTOL specs and ISO 1996 standards.</p>
+        `;
+        
+        modal.style.visibility = 'visible';
+        modal.style.opacity = '1';
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('quietCrisisModal');
+        modal.style.visibility = 'hidden';
+        modal.style.opacity = '0';
+    }
+
+    // Close modal when clicking outside the content
+    window.onclick = function(event) {
+        const modal = document.getElementById('quietCrisisModal');
+        if (event.target === modal) {
+            closeModal();
+        }
+    }
+</script>
+
+</body>
+</html>
